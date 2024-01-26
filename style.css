@@ -29,3 +29,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.logo{
+    padding: 25px;
+    border-radius: 25px;
+}
