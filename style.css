@@ -30,6 +30,6 @@ nav{
     flex-wrap: wrap;
 }
 .logo{
-    padding: 25px;
-    border-radius: 25px;
+    width: 200;
+    border-radius: 150px;
 }
