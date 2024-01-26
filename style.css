@@ -39,9 +39,10 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #000000d3;
+    color: #000090;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
     position: relative;
 }
 nav ul li a::after{
@@ -49,4 +50,20 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+.header-text{
+    color: #000090;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.header-text p{
+    font-size: 20px;
+    text-decoration:#080808 underline;
+}
+.header-text h1{
+    font-size: 25px;
+}
+.header-text span{
+    color: #131010;
 }
