@@ -39,9 +39,9 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta fugit architecto vero similique ratione voluptatibus sunt aperiam corrupti eos obcaecati iste, commodi distinctio culpa? Maiores eligendi quia animi ex illo.</p>
                 </div>
                 <div class="tab-titles">
-                    <p class="tab-links active-links">Skills</p>
-                    <p class="tab-links active-links">Experience</p>
-                    <p class="tab-links active-links">Education</p>
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links active-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links active-links" onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -69,6 +69,23 @@
     </div>
 </div>
 <!-- ---------------service------------------ -->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-tab");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 
     </body>
 </html>
