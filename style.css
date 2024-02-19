@@ -69,3 +69,12 @@ nav ul li a:hover::after{
 }
 
 /*------------About------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
