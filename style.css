@@ -155,3 +155,23 @@ nav ul li a:hover::after{
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
+.service-list i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.service-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.service-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.service-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
