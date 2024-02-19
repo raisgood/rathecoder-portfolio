@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/11db549ea0.js" crossorigin="anonymous"></script>
     </head>
     <body>
     <div id="header">
@@ -19,7 +20,9 @@
 <a href="#portfolio">Portfolio</a>
 <a href="#contact">Contact</a>
     </li>
+    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
 </ul>
+<i class="fa-solid fa-bars" onclick="openmenu()"></i>
 </nav>
 <div class="header-text">
     <p>Front-End Web Developer</p>
@@ -69,6 +72,31 @@
     </div>
 </div>
 <!-- ---------------service------------------ -->
+<div id="services">
+    <div class="container">
+        <div class="sub-title">My Services</div>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, perferendis. Molestiae, quos. Reiciendis excepturi deserunt ratione laborum temporibus ex minus consectetur voluptatem atque debitis amet, aliquam enim voluptate doloribus fugit?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Designer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem autem veniam ipsum cupiditate illum, deserunt, ipsam asperiores dolor molestiae eum, aperiam odio? Itaque voluptatibus quidem deserunt maxime est, quod vero!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ullam doloremque eos suscipit enim, sunt maxime, aperiam totam nisi porro sed iusto tempora, vel quas expedita rem. Magni, inventore est.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
@@ -85,6 +113,17 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
 </script>
 
     </body>
