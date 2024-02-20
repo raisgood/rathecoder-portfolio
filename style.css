@@ -16,7 +16,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/Web\ Development\ Picture.jpg);
+    background-image: url(Images/On\ the\ computer.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -321,7 +321,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(Images/Web\ Development\ Picture.jpg);
+        background-image: url(Images/On\ the\ computer.jpeg);
     }
     .header-text{
         margin-top: 100px;
@@ -377,9 +377,14 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
-    msg{
+    #msg{
         color: #61b762;
         margin-top: -40px;
         display: block;
     }
+}
+#msg{
+    color: #61b762;
+    margin-top: -40px;
+    display: block;
 }
