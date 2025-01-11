@@ -139,10 +139,11 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <form onsubmit="sendMail(); reset(); return false;" autocomplete="off" >
+                    <input type="text" id="subject" name="Subject" placeholder="Subject" required>
+                    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
@@ -182,24 +183,28 @@
     }
 </script>
 
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "c-_hic98bz18LxCtU",
+      });
+   })();
+</script>
+
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwo2fgnhESIBoAqUSqGsHie2p9Q4kO7xAa3hkH00W50civCL4xpikdqsAkozAxk738SVQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Got It!!!!!"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    function sendMail(){
+        let parms = {
+            subject: document.getElementById("subject").value,
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+        }
+        emailjs.send("service_t52s6k3","template_2cfp00t", parms).then(alert("Email Sent!!!!"))
+    }
+</script>
 
     </body>
 </html>
